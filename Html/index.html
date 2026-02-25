@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="border-design">
+        <div class="input-num">
+              <input class="user-input" type="text" name="" id="FirstNum" placeholder="Enter First Number">
+              
+              <select name="" id="operator">
+                <option value="add">+</option>
+                <option value="minus">-</option>
+                <option value="divide">/</option>
+                <option value="multiply">*</option>
+             </select>
+              
+              
+              <input class="user-input"  type="text" name="" id="SecondNum" placeholder="Enter Second Number">
+             
+        </div>
+        <div class="answer-area">
+             <label for="" id="result">Answer</label>
+             <button class="cal-btn" onclick="calculate()">Calculate</button>
+        </div>
+       
+    </div>
+  
+
+</body>
+<script>
+
+function calculate(){
+const num1 = parseFloat(document.getElementById("FirstNum").value);
+const num2 = parseFloat(document.getElementById("SecondNum").value);
+const operator = document.getElementById("operator").value;
+const result = document.getElementById("result");
+
+if(isNaN(num1) || isNaN(num2)){
+    result.textContent = "Must be a Number!"
+    return;
+}
+
+let answer; 
+
+switch(operator){
+    case "add":
+        answer = num1 + num2;
+    break;
+
+    case "minus":
+        answer = num1 - num2; 
+    break;
+
+    case "multiply":
+        answer = num1 * num2; 
+    break;
+
+    case "divide": 
+    answer = num1 / num2; 
+    break;
+}
+
+    result.textContent = `Result: ${answer}`;
+    result.style.color = "green";
+}
+
+</script>
+</html>
