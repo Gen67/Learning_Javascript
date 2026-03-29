@@ -1,0 +1,28 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Background1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(65, 169, 255);
+}
+
+.time-container{ 
+   text-align: center;
+   background-color: rgba(129, 126, 126, 0.192);
+   backdrop-filter: blur(8px);
+   width: 60%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+   font-size: 90px;
+   color: white;
+   font-weight: 700;
+   font-family: Verdana;
+   position: fixed;
+   
+}
